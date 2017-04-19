@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splashscree"
+    tools:context="com.light.niepaper.activity_splashscreen"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="104dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:background="@drawable/roundbutt"
+        android:fontFamily="serif"
+        android:onClick="onLogin"
+        android:text="@string/login_button"
+        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="104dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="106dp"
+        android:layout_marginStart="128dp"
+        android:background="@drawable/roundbutt"
+        android:fontFamily="serif"
+        android:onClick="onSignup"
+        android:text="@string/signup_button"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/login" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">NIEPAPER</string>
+    <string name="login_button">LOGIN</string>
+    <string name="signup_button">SIGN UP</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="forget_passwd">Forgot password?</string>
+    <string name="signup_login">Not Registered? SignUp now! </string>
+    <string name="username">Name</string>
+    <string name="registerbutt">REGISTER!</string>
+    <string name="title_activity_profile">profileActivity</string>
+    <string name="login_error_message">Email and Password fields empty!please enter your email and password</string>
+    <string name="login_error_title">Error</string>
+    <string name="invalid_user">Invalid credentials ,please check you email and password</string>
+    <string name="signup_error">Please make sure all fields are filled in correctly</string>
+</resources>
