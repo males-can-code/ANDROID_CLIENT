@@ -5,19 +5,24 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class activity_Signup extends AppCompatActivity {
     protected EditText name;
     protected EditText email;
     protected EditText passwd;
     protected FirebaseAuth firebaseAuth;
+    private static final String TAG = "activity_Signup";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +35,7 @@ public class activity_Signup extends AppCompatActivity {
         passwd = (EditText) findViewById(R.id.et_passwd);
 
         firebaseAuth = FirebaseAuth.getInstance();
-
+        final FirebaseUser user = firebaseAuth.getCurrentUser();
         String email_ = email.getText().toString();
         String passwd_ = passwd.getText().toString();
 
@@ -44,7 +49,16 @@ public class activity_Signup extends AppCompatActivity {
                     .setPositiveButton(android.R.string.ok, null);
             AlertDialog dialog = builder.create();
             dialog.show();
-        }else{
+        }
+        else if(passwd_.length() < 8){
+            AlertDialog.Builder builder = new AlertDialog.Builder(activity_Signup.this);
+            builder.setMessage(R.string.password_error)
+                    .setTitle(R.string.login_error_title)
+                    .setPositiveButton(android.R.string.ok, null);
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        } else{
+
             firebaseAuth.createUserWithEmailAndPassword(email_,passwd_)
                     .addOnCompleteListener(activity_Signup.this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -54,6 +68,7 @@ public class activity_Signup extends AppCompatActivity {
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
+
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(activity_Signup.this);
                                 builder.setMessage(task.getException().getMessage())
@@ -65,7 +80,6 @@ public class activity_Signup extends AppCompatActivity {
                             }
                         }
                     });
-
         }
     }
 }

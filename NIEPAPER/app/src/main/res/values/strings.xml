@@ -10,7 +10,21 @@
     <string name="registerbutt">REGISTER!</string>
     <string name="title_activity_profile">profileActivity</string>
     <string name="login_error_message">Email and Password fields empty!please enter your email and password</string>
-    <string name="login_error_title">Error</string>
+    <string name="login_error_title">Error!</string>
     <string name="invalid_user">Invalid credentials ,please check you email and password</string>
     <string name="signup_error">Please make sure all fields are filled in correctly</string>
+    <string name="password_error">Please make sure your password is more than 8 characters long</string>
+    <string name="password_reset">An email has been sent to your email address to help reset your password</string>
+    <string name="action_settings">SignOut</string>
+    <string name="action_scheduler">Scheduler</string>
+    <string name="action_createnote">Create NoteBook</string>
+    <string name="action_checknote">Open existing NoteBook</string>
+    <string name="action_chat">CHAT</string>
+    <string name="title_activity_make_note">MakeNote</string>
+    <string name="appname">NIEPAPER</string>
+    <string name="title_activity_text_pad">TextPad</string>
+    <string name="enter_title">Enter your title here</string>
+    <string name="enter_content">Enter your content here</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
