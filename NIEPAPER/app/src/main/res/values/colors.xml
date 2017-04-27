@@ -2,7 +2,9 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303f9f</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#f88b0c</color>
     <color name="textandeditview">#ffffff</color>
-    <color name="signinandloginpage">#0e27cd</color>
+    <color name="signinandloginpage">#0d2bf6</color>
+    <color name="white_overlay">#F3F3F3</color>
+    <color name="secondary_text">#727272</color>
 </resources>
